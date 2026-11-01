@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BTSOoD · Break the Wall</title>
+<meta name="description" content="25 Flavors of Doubt. Name the creature, check a counter, break the wall.">
+<meta name="theme-color" content="#0a0e12">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BTSOoD">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/icon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="btsBronze" gradientUnits="userSpaceOnUse" x1="30" y1="10" x2="170" y2="195"><stop offset="0" stop-color="#EDC08E"/><stop offset=".35" stop-color="#BF8851"/><stop offset=".7" stop-color="#7E502B"/><stop offset="1" stop-color="#C08A55"/></linearGradient></defs></svg>
+
+<div class="app">
+  <header class="bar">
+    <a class="brand" href="#today" aria-label="BTSOoD home"><img src="assets/icons/icon-192.png" alt=""><span class="mark">BTSOoD</span></a>
+    <div class="meter" id="meter" title="Bricks broken: cards you've put a counter into motion on">
+      <div class="bricks" id="bricks" aria-hidden="true"></div><span id="mcount">0 / 25</span>
+    </div>
+  </header>
+
+  <main id="view" tabindex="-1"></main>
+
+  <nav class="tabs" id="tabs" aria-label="Sections">
+    <a href="#today" data-tab="today"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg><span>Today</span></a>
+    <a href="#journey" data-tab="journey"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h7v4H3zM14 6h7v4h-7zM3 14h4v4H3zM11 14h10v4H11z"/></svg><span>Journey</span></a>
+    <a href="#deck" data-tab="deck"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="11" height="15" rx="2"/><path d="M9 21h9a2 2 0 0 0 2-2V8"/></svg><span>Deck</span></a>
+    <a href="#journal" data-tab="journal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h11l3 3v15H5z"/><path d="M9 9h6M9 13h6M9 17h4"/></svg><span>Journal</span></a>
+  </nav>
+</div>
+
+<div class="overlay" id="overlay" hidden>
+  <div class="scrim" data-close></div>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle"></div>
+</div>
+<div class="celebrate" id="celebrate" hidden></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<noscript><p style="padding:24px;color:#ebe5da">BTSOoD needs JavaScript turned on.</p></noscript>
+
+<script src="data/deck.js"></script>
+<script src="data/symbols.js"></script>
+<script src="js/wall.js"></script>
+<script src="js/store.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
